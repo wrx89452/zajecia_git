@@ -16,7 +16,6 @@ docker_run:docker_build
 		-p 5000:5000 \
 		-d hello-world-printer
 USERNAME=wrx89452
-export DOCKER_PASSWORD=12Jedrep!
 TAG=$(USERNAME)/hello-world-printer
 docker_push: docker_build
 	@docker login --username $(USERNAME) --password $${DOCKER_PASSWORD}; \
